@@ -133,9 +133,3 @@ A complete personal audit log of the AI prompt engineering and iterative refinem
 
 * **Author:** Svarshan
 * **GitHub Profile:** [@Svarshan1445](https://github.com/Svarshan1445)
-* **GitHub Repository:** [https://github.com/Svarshan1445/Diona](https://github.com/Svarshan1445/Diona)
-* **Submission Format (WhatsApp Group):**
-  ```text
-  Svarshan - https://github.com/Svarshan1445/Diona
-  ```
-* **Submission Deadline:** September 1, 2026, by 5:00 PM IST
