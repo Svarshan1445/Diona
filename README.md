@@ -1,137 +1,141 @@
-# Workers Compensation Board of Manitoba (WCB) - Digital Document Forms Suite
-
-**Author:** Svarshan ([@Svarshan1445](https://github.com/Svarshan1445))  
-**Repository:** [https://github.com/Svarshan1445/Diona](https://github.com/Svarshan1445/Diona)  
-**Tech Stack:** Pure HTML5, CSS3, Vanilla JavaScript (Zero third-party frameworks/dependencies)
+# WCB Manitoba PDF Report Recreation – HTML, CSS & JavaScript
+### Diona Technologies Internship Assignment
 
 ---
 
-## 📹 Video Presentation Submissions (Picture-in-Picture)
+## 📌 Overview
 
-As per the assignment requirements, each 2-minute narrated video features Picture-in-Picture (Webcam Face + Browser Screen Recording) walking through the requirements, dynamic datasets, code architecture, challenges, and AI prompts:
-
-| Exercise | Description | Video Link |
-| :--- | :--- | :--- |
-| **Exercise 1** | Medical & Travel Expense Request Form Walkthrough | 🔗 `[Insert Exercise 1 Video Link / Google Drive / YouTube Unlisted Link]` |
-| **Exercise 2** | Worker Progress Report Form Walkthrough | 🔗 `[Insert Exercise 2 Video Link / Google Drive / YouTube Unlisted Link]` |
-
-*(Word-for-word presentation scripts for both videos are provided in the [Video Presentation Guides](#-2-minute-narrated-video-presentation-guides) section below.)*
+This repository contains the complete implementation for the two assigned statutory document exercises for the Workers Compensation Board of Manitoba (WCB). The objective is to recreate the provided reference PDF/Word documents as responsive, pixel-accurate web applications using **Pure HTML, CSS, and JavaScript**, while fully supporting dynamic data scaling, interactive form states, and print-ready PDF export without breaking layouts.
 
 ---
 
-## 📋 Assignment Objectives & Submission Checklist
+## 📑 Exercises
 
-| Evaluation Parameter | Status | Implementation Details |
-| :--- | :---: | :--- |
-| **1. Open Code Core Architecture** | ✅ Completed | Built strictly with semantic HTML5, decoupled modular CSS3 stylesheets (`base.css`, `document-common.css`, `expense-request.css`, `worker-progress.css`, `interactive.css`), and Vanilla JavaScript object models. Zero external UI frameworks or build steps. |
-| **2. Exercise 1 Copy & Scaling** | ✅ Completed | Dynamic array parsing across all 6 tables (Prescription Drugs, OTC Drugs, Supplies, Parking, Mileage, Bus/Taxi Fares) with real-time automatic subtotal summation and Grand Total calculation. Includes in-place table row additions/deletions and in-cell editing. |
-| **3. Exercise 2 Copy & Form Logic** | ✅ Completed | Dynamic boolean flags rendering custom checkbox/radio indicators (`✓` / `•`), interactive clickable 1–10 visual pain scale matrix, dynamic recovery inputs, and statutory declaration notice. |
-| **4. High-Fidelity Print & PDF Engine** | ✅ Completed | High-resolution WCB vector/raster header logo, official contact bar, standardized claim headers, page count indicator (`Page 1 of 1`), and dedicated `@media print` rules removing UI controls and formatting to exact Letter/A4 boundaries. |
-| **5. Multi-Scenario Datasets & Live JSON** | ✅ Completed | Seamless switching between *Default Dataset*, *Minimal Single-Row Dataset*, and *Multi-Month Stress-Test (10+ items)*. Includes integrated **Live JSON Editor** for arbitrary testing. |
-| **6. Narrated PiP Presentation Scripts** | ✅ Completed | Complete 2-minute spoken scripts for both exercises provided below. |
-| **7. AI Prompt History Logging** | ✅ Completed | Full transcript and audit log of AI prompt engineering documented in [`AI_PROMPT_LOGS.md`](./AI_PROMPT_LOGS.md). |
+### Exercise 1 – Medical & Travel Expense Request
+A dynamic, web-based recreation of the WCB Medical & Travel Expense Request statutory reimbursement form.
+
+* **WCB Logo and Header:** High-resolution official branding, address (333 Broadway Winnipeg, MB R3C 4W3), phone numbers, and website link.
+* **Worker & Claim Information:** Claim No. 20042047 and worker notice (*Madeleine Willson*).
+* **6 Dynamic Expense Tables:**
+  1. Prescription Drugs
+  2. Over-the-Counter Drugs
+  3. Bandages, Braces or Other Medical Supplies
+  4. Parking for Medical Appointments
+  5. Mileage to Medical Appointments
+  6. Bus or Taxi Fare for Medical Appointments
+* **Real-time Financial Calculations:** Automated category subtotals and Grand Total Out-of-Pocket Reimbursement calculation on every keystroke/data mutation.
+* **In-Place Row Actions:** Interactive `+ Add Row` and `× Delete Row` buttons for seamless table manipulation.
+* **Statutory Privacy Notice & Print Footer:** Standardized legal box, claim reference, and page number indicator (`Page 1 of 1`).
 
 ---
 
-## 📁 Repository Structure
+### Exercise 2 – Worker Progress Report
+A dynamic, web-based recreation of the WCB Worker Progress Report tracking worker recovery and duty accommodations.
 
-```
-Diona/
-├── index.html                  # Unified Interactive Studio & Document Switcher
-├── expense-request.html        # Standalone Document 1 (Medical & Travel Expense Request)
-├── worker-progress.html        # Standalone Document 2 (Worker Progress Report)
-├── assets/
-│   ├── wcb_logo.png            # High-resolution WCB Manitoba Header Logo
-│   └── wcb_logo_small.jpg      # Fallback brand image
-├── css/
-│   ├── base.css                # Global CSS variables, typography reset, print media rules
-│   ├── document-common.css     # Shared WCB headers, claim info strips, legal footer
-│   ├── expense-request.css     # Table layout, zebra striping, currency alignment, total card
-│   ├── worker-progress.css     # Custom radio/checkbox indicators, 1-10 pain grid
-│   ├── interactive.css         # Live cell editing, row add/delete buttons, hover states
-│   └── app-toolbar.css         # Sleek top toolbar & JSON live editor modal
-├── js/
-│   ├── data-expense.js         # Expense request datasets (Default, Minimal, 10+ item Stress-Test)
-│   ├── data-progress.js        # Progress report datasets (Default, Early Stage, Recovered)
-│   ├── render-expense.js       # Pure Vanilla JS render engine & calculations for Document 1
-│   ├── render-progress.js      # Pure Vanilla JS render engine & interactive state for Document 2
-│   └── app.js                  # Application coordinator & event dispatcher
-├── README.md                   # Comprehensive documentation, video guides & submission format
-└── AI_PROMPT_LOGS.md           # Prompt engineering log and development trajectory
-```
+* **WCB Logo and Header:** Official header, Claim Number, and Report Code (WP).
+* **Return-to-Work Section:** Interactive custom radio indicators for work status (Not Missed Time / Not Returned / Returned with date), work duty accommodations (Full/Modified duties, regular/reduced hours), return-to-work progress notes, expected return date, and employer contact records.
+* **Recovery Section:** Clickable recovery status toggle, comments box, and an interactive **1–10 Pain/Discomfort Scale Matrix** with real-time active star badge highlight.
+* **Medical Treatment & Home Exercises:** Treatment provider details, appointment dates, frequency, prescribed medications, and structured home exercise programs.
+* **Legal Certification & Privacy Notice:** Official WCB legal declaration and privacy policy.
+* **Print-Ready Structure:** Clean form boundaries formatted for official submission.
+
+---
+
+## 💻 Tech Stack
+
+* **HTML5:** Semantic document structure, accessible input states, and tabular hierarchies.
+* **CSS3:** Custom layout styling, modular stylesheets (`base.css`, `document-common.css`, `expense-request.css`, `worker-progress.css`, `interactive.css`, `app-toolbar.css`), table borders, typography, and robust `@media print` rules.
+* **JavaScript (Vanilla JS):** Client-side reactive data-driven rendering engine, live calculation reducers, dataset switcher, and in-place DOM editing. Zero third-party UI frameworks or external dependencies.
+
+---
+
+## ✨ Key Features
+
+* **Data-Driven Architecture:** Pure client-side generation from decoupled JSON data structures.
+* **Dynamic Datasets:** Instant switching via the top navigation dropdown:
+  * *Default Dataset:* Exact statutory sample matching reference documents.
+  * *Minimal Dataset:* 1-row item and empty state fallback testing.
+  * *Stress-Test Dataset:* Multi-month record with 10+ items per category demonstrating dynamic scaling without layout breakdown.
+* **Live In-Place Editing:** Direct click-and-type editing on table cells, text areas, and underlined fields.
+* **Interactive Form Elements:** Clickable radio buttons, checkbox indicators (`✓` / `•`), and clickable 1–10 pain scale cells.
+* **⚙️ Live JSON Editor:** Integrated modal allowing evaluators to paste and render custom arbitrary JSON payloads in real time.
+* **Print-Ready Letter Layout (8.5" x 11"):** Native browser PDF printing with automatic suppression of UI toolbars, buttons, and edit outlines.
+
+---
+
+## 📊 Dynamic Data Capabilities
+
+The reports are designed to scale and adapt dynamically to varying data payloads:
+
+* Worker Name & Claim Number
+* Return-to-Work dates, duty types, and supervisor contacts
+* Medical treatment provider types, clinic names, and treatment dates
+* 1–10 Pain / discomfort scale ratings
+* Dynamic multi-row expense tables (1 to 10+ entries)
+* Currency values with automated category subtotals and grand totals
+* Mileage distance calculations (round trip km)
 
 ---
 
 ## 🚀 How to Run Locally
 
-### Option 1: Direct File Open (Zero Setup Required)
-Double-click `index.html` (or open it in Google Chrome, Microsoft Edge, Firefox, or Safari).
+Since this application is completely client-side with zero build steps or package dependencies:
 
-### Option 2: Local HTTP Server (Port 7725 or 8000)
+### Method 1: Direct File Launch
+Double-click `index.html` (or open it directly in Google Chrome, Microsoft Edge, Firefox, or Safari).
+
+### Method 2: Local HTTP Server (Port 7725 or 8000)
 ```bash
-# Using Python 3
+# Using Python
 python -m http.server 7725
 
-# Or using Node / npx
+# Using Node / npx
 npx serve . -l 7725
 ```
 Open your browser at `http://localhost:7725`.
 
 ---
 
-## 💡 Key Technical Features & Dynamic Behavior
+## 🖨️ Printing & Saving as PDF
 
-1. **Dynamic Table Arrays & Row Manipulation:**
-   - Evaluators can click `+ Add Drug`, `+ Add OTC Drug`, `+ Add Medical Supply`, `+ Add Parking`, `+ Add Trip`, or `+ Add Fare` to dynamically insert new rows on the fly.
-   - Rows can be deleted individually with the `×` delete button.
-   - Any cell can be clicked and edited directly; subtotals and the grand total recalculate instantly on blur/keystroke without page reload.
-2. **Interactive Form States:**
-   - Document 2 allows evaluators to click on radio buttons and checkbox choices to toggle injury and return-to-work progression states.
-   - Clicking any rating on the 1–10 Pain Scale instantly updates the active star badge and visual selection.
-3. **Print Fidelity:**
-   - Pressing `Ctrl + P` (or clicking the "🖨 Print / Export PDF" button) automatically hides the top toolbar, action buttons, and edit outlines, rendering a clean, pixel-perfect statutory PDF document.
+To export a clean, official statutory PDF from the browser:
 
----
-
-## 🎥 2-Minute Narrated Video Presentation Guides (PiP Webcam + Screen)
-
-*Use software like OBS Studio, Loom, or Windows Clipchamp with Picture-in-Picture (Face Webcam visible in corner + Browser screen sharing).*
+1. Open the document in **Google Chrome** or **Microsoft Edge**.
+2. Press **`Ctrl + P`** (or **`Cmd + P`** on macOS), or click the **"🖨 Print / Export PDF"** button.
+3. Destination: Select **Save as PDF**.
+4. Paper size: Select **Letter** (8.5" x 11").
+5. Options: **Uncheck "Headers and footers"** (the application natively renders standardized headers, page numbers, and footers).
+6. Click **Save**.
 
 ---
 
-### 🎙️ Video Script 1: Exercise 1 — Medical & Travel Expense Request (~2 Minutes)
+## 📹 Demonstration Videos (Picture-in-Picture)
 
-| Timeline | Spoken Script & Screen Action |
-| :--- | :--- |
-| **0:00 - 0:25** | *"Hello everyone. Today I'm presenting my solution for Exercise 1: the WCB Manitoba Medical & Travel Expense Request form. The requirement was to replicate the statutory PDF with 100% fidelity using pure HTML, CSS, and Vanilla JavaScript, ensuring dynamic scalability from single items to multi-page lists."* <br>*(Action: Show the default view of Document 1 on localhost:7725)* |
-| **0:25 - 0:50** | *"Let's look at the dynamic behavior. I have modeled all six tables—Prescription, Over-the-Counter, Medical Supplies, Parking, Mileage, and Transit Fares—as dynamic arrays. Notice the grand total currently shows \$56.00. If I click '+ Add Drug' or edit this price to \$50.00, you can see all category subtotals and the grand total recalculate automatically in real-time."* <br>*(Action: Click '+ Add Drug', change a value, point out automatic recalculation)* |
-| **0:50 - 1:15** | *"Now let's switch from the Default Dataset to the 10+ item Multi-Month Stress Test using the top dropdown. As you can see, the layout seamlessly scales across multiple categories without text clipping or border breakdown. I can also open the Live JSON Editor to inject custom test payloads."* <br>*(Action: Select 'Stress-Test Dataset', scroll down, open & close 'Edit JSON')* |
-| **1:15 - 1:40** | *"For the technical architecture, I used decoupled CSS for typography and print boundaries. When I trigger the Print / Export to PDF button, all action buttons and navigation bars disappear, leaving a clean, print-ready document with exact margins and headers."* <br>*(Action: Click 'Print / Export PDF' and display the print preview modal)* |
-| **1:40 - 2:00** | *"One key challenge was maintaining table alignment and currency formatting when rows expand dynamically, which I resolved with tabular-nums CSS and pure JS reducers. All AI prompt logs are documented in AI_PROMPT_LOGS.md in the repo. Thank you!"* <br>*(Action: Briefly show repository structure in VS Code and conclude)* |
+Each exercise includes a 2-minute narrated demonstration video featuring Picture-in-Picture (Face Webcam + Browser Screen Recording):
 
----
-
-### 🎙️ Video Script 2: Exercise 2 — Worker Progress Report (~2 Minutes)
-
-| Timeline | Spoken Script & Screen Action |
-| :--- | :--- |
-| **0:00 - 0:25** | *"Hello. In this video, I will demonstrate Exercise 2: the WCB Manitoba Worker Progress Report. This document tracks a worker's return-to-work status, recovery progress, treatment schedules, and subjective pain scores using pure HTML, CSS, and Vanilla JS."* <br>*(Action: Switch to Document 2: Worker Progress Report)* |
-| **0:25 - 0:50** | *"Looking at the dynamic inputs: notice the custom radio and checkbox indicators. Clicking between 'Not Missed Time', 'Not Returned', or 'Returned' instantly toggles the custom dot indicators. Similarly, under Recovery, evaluators can click directly on the 1-to-10 pain scale matrix to select a rating, which highlights the active rating with a star badge."* <br>*(Action: Click different radio options, click on pain scale numbers 4, 7, 9)* |
-| **0:50 - 1:15** | *"We can also switch datasets to simulate different worker recovery stages: from 'Early Stage / Not Returned' to 'Full Recovery & Normal Duties'. All feedback boxes and underlined fields are fully editable in-place, allowing seamless live adjustments."* <br>*(Action: Change dropdown to 'Early Stage', then 'Full Recovery', type into a comment box)* |
-| **1:15 - 1:40** | *"For code implementation, render-progress.js dynamically maps boolean state flags and string values to custom SVG/Unicode box indicators without requiring heavy frameworks. Triggering Print Preview shows that the full declaration, legal notes, and claim footer format perfectly for official submission."* <br>*(Action: Open Print Preview, show clean legal box & footer)* |
-| **1:40 - 2:00** | *"A challenge was building accessible, framework-free custom radio buttons that remain interactive on screen while printing cleanly. Full development prompts are in AI_PROMPT_LOGS.md. Thank you!"* <br>*(Action: Conclude video with face and screen visible)* |
+| Exercise | Walkthrough Overview | Video Link |
+| :--- | :--- | :--- |
+| **Exercise 1: Expense Request** | Explains requirements, demonstrates dynamic table scaling (1 vs 10+ rows), live row additions/deletions, real-time total recalculation, print preview, code walkthrough, and AI prompts. | 🔗 `[Insert Exercise 1 Video Link / Drive / YouTube]` |
+| **Exercise 2: Worker Progress** | Explains return-to-work tracking, demonstrates clickable radio/checkbox states, interactive 1–10 pain matrix, dataset switching, print formatting, code architecture, and AI prompts. | 🔗 `[Insert Exercise 2 Video Link / Drive / YouTube]` |
 
 ---
 
-## 📌 Assumptions Made & Challenges Resolved
+## 🤖 AI Usage & Prompt History
 
-1. **Dynamic Row Count Handling:** Assumed tables must gracefully handle both 0-row empty states (displaying a helpful *'No expenses claimed'* notice with a one-click add button) and 10+ items without layout distortion.
-2. **Framework-Free State Management:** Instead of importing React or Vue, designed a lightweight reactive render loop in vanilla JS that re-renders DOM fragments and recalculates totals upon data mutations.
-3. **Print Layout Suppression:** Ensured interactive web features (`+ Add Row`, `Delete`, `Edit JSON`, hover borders) are completely suppressed via `@media print` CSS.
+AI assistance was utilized during the development workflow for requirement deconstruction, modular architecture planning, render engine synthesis, print CSS boundary adjustments, and code refinement.
+
+A complete personal audit log of the AI prompt engineering and iterative refinement process is included in this repository:
+👉 **[`AI_PROMPT_LOGS.md`](./AI_PROMPT_LOGS.md)**
 
 ---
 
-## 📤 Submission Format
-- **WhatsApp Post Format:** `<Your Name> - <GitHub Repository Link>`
-- **Example:** `Svarshan - https://github.com/Svarshan1445/Diona`
-- **Deadline:** September 1, 2026, by 5:00 PM IST
+## 👤 Author & Submission Information
+
+* **Author:** Svarshan
+* **GitHub Profile:** [@Svarshan1445](https://github.com/Svarshan1445)
+* **GitHub Repository:** [https://github.com/Svarshan1445/Diona](https://github.com/Svarshan1445/Diona)
+* **Submission Format (WhatsApp Group):**
+  ```text
+  Svarshan - https://github.com/Svarshan1445/Diona
+  ```
+* **Submission Deadline:** September 1, 2026, by 5:00 PM IST
