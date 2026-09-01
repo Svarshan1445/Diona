@@ -1,0 +1,84 @@
+/* ==========================================================================
+   WCB Document Suite - Medical & Travel Expense Request Stylesheet
+   ========================================================================== */
+
+.expense-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 12px;
+  font-size: 8.5pt;
+}
+
+.expense-table th,
+.expense-table td {
+  border: 1px solid var(--wcb-border);
+  padding: 4px 6px;
+  vertical-align: top;
+}
+
+.expense-table th {
+  background-color: var(--wcb-light-blue);
+  color: var(--wcb-dark-blue);
+  font-weight: bold;
+  text-align: left;
+  font-size: 8pt;
+}
+
+.expense-table tr:nth-child(even) td {
+  background-color: var(--wcb-row-alt);
+}
+
+.expense-table td.col-amount,
+.expense-table th.col-amount {
+  text-align: right;
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+}
+
+.expense-table td.col-date,
+.expense-table th.col-date {
+  white-space: nowrap;
+}
+
+.expense-table td.col-center,
+.expense-table th.col-center {
+  text-align: center;
+}
+
+.expense-summary-box {
+  margin-top: 12px;
+  margin-bottom: 12px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.expense-summary-card {
+  background: var(--wcb-light-blue);
+  border: 1.5px solid var(--wcb-blue);
+  border-radius: 2px;
+  padding: 8px 14px;
+  min-width: 260px;
+}
+
+.expense-summary-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 8.5pt;
+  margin-bottom: 4px;
+}
+
+.expense-summary-row.grand-total {
+  border-top: 1.5px solid var(--wcb-blue);
+  padding-top: 4px;
+  margin-top: 4px;
+  font-size: 10pt;
+  font-weight: bold;
+  color: var(--wcb-dark-blue);
+}
+
+.table-empty-row td {
+  text-align: center;
+  font-style: italic;
+  color: #777;
+  padding: 8px !important;
+}

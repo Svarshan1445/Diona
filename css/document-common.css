@@ -1,0 +1,134 @@
+/* ==========================================================================
+   WCB Document Suite - Common Document Components
+   ========================================================================== */
+
+.wcb-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding-bottom: 8px;
+  border-bottom: 2px solid var(--wcb-blue);
+  margin-bottom: 12px;
+}
+
+.wcb-logo-container {
+  max-width: 220px;
+}
+
+.wcb-logo-container img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.wcb-contact-info {
+  text-align: right;
+  font-size: 8.5pt;
+  color: var(--wcb-text-muted);
+  line-height: 1.35;
+}
+
+.wcb-contact-info .wcb-address {
+  font-weight: 600;
+  color: var(--wcb-text);
+}
+
+.wcb-contact-info .wcb-url {
+  color: var(--wcb-accent);
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.doc-title-bar {
+  margin-bottom: 8px;
+}
+
+.doc-main-title {
+  font-size: 15pt;
+  font-weight: bold;
+  color: var(--wcb-blue);
+  letter-spacing: -0.2px;
+  margin-bottom: 4px;
+}
+
+.claim-info-strip {
+  background: var(--wcb-light-blue);
+  border: 1px solid var(--wcb-border);
+  border-left: 4px solid var(--wcb-blue);
+  padding: 6px 10px;
+  margin-bottom: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  font-size: 9pt;
+}
+
+.claim-info-item {
+  margin-right: 14px;
+}
+
+.claim-label {
+  font-weight: bold;
+  color: var(--wcb-dark-blue);
+}
+
+.claim-value {
+  color: var(--wcb-text);
+}
+
+.claim-worker-notice {
+  width: 100%;
+  margin-top: 4px;
+  font-size: 8.5pt;
+  color: var(--wcb-text);
+}
+
+.section-header {
+  background: var(--wcb-blue);
+  color: #ffffff;
+  padding: 4px 8px;
+  font-size: 9.5pt;
+  font-weight: bold;
+  margin-top: 12px;
+  margin-bottom: 6px;
+  border-radius: 1px;
+}
+
+.section-note {
+  font-size: 8pt;
+  font-style: italic;
+  color: var(--wcb-text-muted);
+  margin-top: -3px;
+  margin-bottom: 6px;
+  line-height: 1.3;
+}
+
+.legal-notice-box {
+  margin-top: 16px;
+  padding: 8px 10px;
+  background: #fafafa;
+  border: 1px solid #d0d7de;
+  border-left: 3px solid #6e7781;
+  font-size: 7.8pt;
+  color: #333333;
+  line-height: 1.35;
+}
+
+.legal-notice-box p {
+  margin-bottom: 6px;
+}
+
+.legal-notice-box p:last-child {
+  margin-bottom: 0;
+}
+
+.document-footer {
+  margin-top: auto;
+  padding-top: 10px;
+  border-top: 1px solid #ccc;
+  display: flex;
+  justify-content: space-between;
+  font-size: 7.5pt;
+  color: var(--wcb-text-muted);
+}

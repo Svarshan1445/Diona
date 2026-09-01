@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WCB Manitoba - Digital Forms Suite</title>
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/document-common.css" />
+  <link rel="stylesheet" href="css/expense-request.css" />
+  <link rel="stylesheet" href="css/worker-progress.css" />
+  <link rel="stylesheet" href="css/interactive.css" />
+  <link rel="stylesheet" href="css/app-toolbar.css" />
+</head>
+<body>
+
+  <!-- Top App Navigation & Controls Toolbar (Hidden during print) -->
+  <header class="app-toolbar no-print">
+    <div class="toolbar-brand">
+      <span>WCB Forms Engine</span>
+      
+    </div>
+
+    <div class="toolbar-controls">
+      <!-- Document Selection -->
+      <div class="control-group">
+        <button class="toolbar-btn doc-nav-btn active" data-doc="expense" onclick="window.switchDocument('expense')">Doc 1: Expense Request</button>
+        <button class="toolbar-btn doc-nav-btn" data-doc="progress" onclick="window.switchDocument('progress')">Doc 2: Worker Progress</button>
+      </div>
+
+      <!-- Dataset Selection -->
+      <div class="control-group">
+        <label for="dataset-select">Data Mode:</label>
+        <select id="dataset-select" class="toolbar-select" onchange="window.changeDataset(this.value)">
+          <option value="default">Default Dataset (Sample Doc)</option>
+          <option value="minimal">Minimal Single-Row Dataset</option>
+          <option value="stressTest">Stress-Test Dataset (Multi-Month 10+)</option>
+        </select>
+      </div>
+
+      <!-- Actions -->
+      <div class="control-group">
+        <button id="btn-edit-json" class="toolbar-btn" title="Live Edit Custom JSON Data" onclick="window.openJsonModal()">⚙ Edit JSON</button>
+        <button id="btn-print" class="toolbar-btn primary" title="Print to PDF / Printer" onclick="window.printDocument()">🖨 Print / Export PDF</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Document Render Target -->
+  <main class="document-wrapper">
+    <div id="document-render-target"></div>
+  </main>
+
+  <!-- JSON Live Editor Modal -->
+  <div id="json-modal" class="json-modal-overlay no-print">
+    <div class="json-modal-card">
+      <div class="json-modal-header">
+        <h3>Live JSON Data Editor</h3>
+        <button id="btn-close-modal" class="toolbar-btn" style="padding: 2px 8px;" onclick="window.closeJsonModal()">✕</button>
+      </div>
+      <div class="json-modal-body">
+        <p style="font-size: 8.5pt; color: #64748b; margin-bottom: 8px;">
+          Modify data below and click Apply to instantly re-render the document with new rows or values.
+        </p>
+        <textarea id="json-editor-textarea" class="json-textarea" spellcheck="false"></textarea>
+      </div>
+      <div class="json-modal-footer">
+        <button id="btn-apply-json" class="toolbar-btn primary" onclick="window.applyCustomJson()">Apply Data &amp; Re-render</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="js/data-expense.js"></script>
+  <script src="js/data-progress.js"></script>
+  <script src="js/render-expense.js"></script>
+  <script src="js/render-progress.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

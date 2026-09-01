@@ -1,0 +1,124 @@
+/* ==========================================================================
+   WCB Document Suite - Base Stylesheet
+   Pure CSS3 - Zero Framework Dependencies
+   ========================================================================== */
+
+:root {
+  --wcb-blue: #003366;
+  --wcb-dark-blue: #002244;
+  --wcb-light-blue: #eef4f9;
+  --wcb-accent: #005691;
+  --wcb-border: #8ca2b5;
+  --wcb-border-dark: #334455;
+  --wcb-text: #111111;
+  --wcb-text-muted: #555555;
+  --wcb-bg: #e6ebf0;
+  --wcb-paper: #ffffff;
+  --wcb-highlight: #fffae6;
+  --wcb-row-alt: #f8fafc;
+  --font-family: Arial, Helvetica, sans-serif;
+  --font-serif: Georgia, 'Times New Roman', Times, serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-family);
+  font-size: 9.5pt;
+  line-height: 1.35;
+  color: var(--wcb-text);
+  background-color: var(--wcb-bg);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Document Container & Paper Simulation */
+.document-wrapper {
+  max-width: 8.5in;
+  margin: 20px auto 40px auto;
+  padding: 0;
+  background: transparent;
+}
+
+.document-page {
+  background: var(--wcb-paper);
+  width: 100%;
+  min-height: 11in;
+  padding: 0.5in 0.6in 0.6in 0.6in;
+  margin-bottom: 24px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.05);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.document-content {
+  flex: 1 0 auto;
+}
+
+/* Page Break Management */
+.page-break {
+  page-break-before: always;
+  break-before: page;
+}
+
+.no-break {
+  page-break-inside: avoid;
+  break-inside: avoid;
+}
+
+/* Print Stylesheet Overrides */
+@media print {
+  @page {
+    size: letter portrait;
+    margin: 0.4in 0.5in 0.5in 0.5in;
+  }
+
+  body {
+    background: #ffffff !important;
+    font-size: 9pt;
+  }
+
+  .no-print {
+    display: none !important;
+  }
+
+  .document-wrapper {
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .document-page {
+    box-shadow: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    min-height: auto !important;
+    page-break-after: always;
+  }
+
+  .document-page:last-child {
+    page-break-after: auto;
+  }
+
+  table {
+    page-break-inside: auto;
+  }
+
+  tr {
+    page-break-inside: avoid;
+    page-break-after: auto;
+  }
+
+  thead {
+    display: table-header-group;
+  }
+
+  tfoot {
+    display: table-footer-group;
+  }
+}

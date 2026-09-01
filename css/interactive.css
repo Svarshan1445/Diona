@@ -1,0 +1,106 @@
+/* ==========================================================================
+   WCB Document Suite - Interactive Controls & Action Buttons
+   ========================================================================== */
+
+.table-header-with-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--wcb-blue);
+  color: #ffffff;
+  padding: 4px 8px;
+  margin-top: 12px;
+  margin-bottom: 6px;
+  border-radius: 1px;
+}
+
+.table-header-with-actions .section-title {
+  font-size: 9.5pt;
+  font-weight: bold;
+}
+
+.btn-add-row {
+  background: #ffffff;
+  color: var(--wcb-dark-blue);
+  border: 1px solid #ffffff;
+  padding: 2px 8px;
+  font-size: 7.5pt;
+  font-weight: bold;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.btn-add-row:hover {
+  background: var(--wcb-light-blue);
+  color: var(--wcb-blue);
+}
+
+.btn-del-row {
+  background: transparent;
+  color: #dc2626;
+  border: none;
+  font-size: 11pt;
+  cursor: pointer;
+  padding: 0 4px;
+  line-height: 1;
+  opacity: 0.6;
+  transition: opacity 0.15s ease;
+}
+
+.btn-del-row:hover {
+  opacity: 1;
+  color: #b91c1c;
+}
+
+.editable-cell {
+  outline: none;
+  min-height: 14px;
+  transition: background-color 0.15s ease;
+}
+
+.editable-cell:hover {
+  background-color: #fff9db !important;
+}
+
+.editable-cell:focus {
+  background-color: #fff3bf !important;
+  box-shadow: inset 0 0 0 1.5px var(--wcb-accent);
+}
+
+.clickable-choice {
+  cursor: pointer;
+  user-select: none;
+  padding: 2px 4px;
+  border-radius: 3px;
+  transition: background-color 0.15s ease;
+}
+
+.clickable-choice:hover {
+  background-color: var(--wcb-light-blue);
+}
+
+.clickable-pain-cell {
+  cursor: pointer;
+  user-select: none;
+  transition: all 0.15s ease;
+}
+
+.clickable-pain-cell:hover {
+  background-color: var(--wcb-light-blue);
+  border-color: var(--wcb-accent);
+}
+
+/* Hide interactive edit/add/delete triggers during print */
+@media print {
+  .btn-add-row,
+  .btn-del-row,
+  .no-print {
+    display: none !important;
+  }
+
+  .editable-cell {
+    background: transparent !important;
+    box-shadow: none !important;
+  }
+}

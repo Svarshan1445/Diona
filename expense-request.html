@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Medical &amp; Travel Expense Request - WCB Manitoba</title>
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/document-common.css" />
+  <link rel="stylesheet" href="css/expense-request.css" />
+  <link rel="stylesheet" href="css/interactive.css" />
+  <link rel="stylesheet" href="css/app-toolbar.css" />
+</head>
+<body>
+  <div class="app-toolbar no-print">
+    <div class="toolbar-brand">
+      <a href="index.html" class="toolbar-btn">← Back to Dashboard</a>
+      <span>Document 1: Medical &amp; Travel Expense Request</span>
+    </div>
+    <div class="toolbar-controls">
+      <button class="toolbar-btn primary" onclick="window.print()">🖨 Print / Export PDF</button>
+    </div>
+  </div>
+
+  <main class="document-wrapper">
+    <div id="document-render-target"></div>
+  </main>
+
+  <script src="js/data-expense.js"></script>
+  <script src="js/render-expense.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      window.activeData = JSON.parse(JSON.stringify(ExpenseDatasets.default));
+      renderExpenseDocument(window.activeData);
+    });
+  </script>
+</body>
+</html>
