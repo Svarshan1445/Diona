@@ -1,10 +1,21 @@
 # Workers Compensation Board of Manitoba (WCB) - Digital Document Forms Suite
 
-A high-fidelity, dynamic digital document rendering engine built with **Pure HTML5, CSS3, and Vanilla JavaScript** (Zero third-party frameworks or dependencies).
+**Author:** Svarshan ([@Svarshan1445](https://github.com/Svarshan1445))  
+**Repository:** [https://github.com/Svarshan1445/Diona](https://github.com/Svarshan1445/Diona)  
+**Tech Stack:** Pure HTML5, CSS3, Vanilla JavaScript (Zero third-party frameworks/dependencies)
 
-This repository fulfills all submission requirements for the **WCB Manitoba Dynamic Document Replication Assignment**, replicating and dynamically scaling both target statutory exercises:
-1. **Exercise 1: Medical & Travel Expense Request**
-2. **Exercise 2: Worker Progress Report**
+---
+
+## 📹 Video Presentation Submissions (Picture-in-Picture)
+
+As per the assignment requirements, each 2-minute narrated video features Picture-in-Picture (Webcam Face + Browser Screen Recording) walking through the requirements, dynamic datasets, code architecture, challenges, and AI prompts:
+
+| Exercise | Description | Video Link |
+| :--- | :--- | :--- |
+| **Exercise 1** | Medical & Travel Expense Request Form Walkthrough | 🔗 `[Insert Exercise 1 Video Link / Google Drive / YouTube Unlisted Link]` |
+| **Exercise 2** | Worker Progress Report Form Walkthrough | 🔗 `[Insert Exercise 2 Video Link / Google Drive / YouTube Unlisted Link]` |
+
+*(Word-for-word presentation scripts for both videos are provided in the [Video Presentation Guides](#-2-minute-narrated-video-presentation-guides) section below.)*
 
 ---
 
@@ -12,7 +23,7 @@ This repository fulfills all submission requirements for the **WCB Manitoba Dyna
 
 | Evaluation Parameter | Status | Implementation Details |
 | :--- | :---: | :--- |
-| **1. Open Code Core Architecture** | ✅ Completed | Semantic HTML5 structure, decoupled modular CSS3 stylesheets (`base.css`, `document-common.css`, `expense-request.css`, `worker-progress.css`, `interactive.css`), and Vanilla JavaScript object models. Zero external UI frameworks. |
+| **1. Open Code Core Architecture** | ✅ Completed | Built strictly with semantic HTML5, decoupled modular CSS3 stylesheets (`base.css`, `document-common.css`, `expense-request.css`, `worker-progress.css`, `interactive.css`), and Vanilla JavaScript object models. Zero external UI frameworks or build steps. |
 | **2. Exercise 1 Copy & Scaling** | ✅ Completed | Dynamic array parsing across all 6 tables (Prescription Drugs, OTC Drugs, Supplies, Parking, Mileage, Bus/Taxi Fares) with real-time automatic subtotal summation and Grand Total calculation. Includes in-place table row additions/deletions and in-cell editing. |
 | **3. Exercise 2 Copy & Form Logic** | ✅ Completed | Dynamic boolean flags rendering custom checkbox/radio indicators (`✓` / `•`), interactive clickable 1–10 visual pain scale matrix, dynamic recovery inputs, and statutory declaration notice. |
 | **4. High-Fidelity Print & PDF Engine** | ✅ Completed | High-resolution WCB vector/raster header logo, official contact bar, standardized claim headers, page count indicator (`Page 1 of 1`), and dedicated `@media print` rules removing UI controls and formatting to exact Letter/A4 boundaries. |
@@ -22,10 +33,10 @@ This repository fulfills all submission requirements for the **WCB Manitoba Dyna
 
 ---
 
-## 📁 Repository Directory Structure
+## 📁 Repository Structure
 
 ```
-wcb_diona_project/
+Diona/
 ├── index.html                  # Unified Interactive Studio & Document Switcher
 ├── expense-request.html        # Standalone Document 1 (Medical & Travel Expense Request)
 ├── worker-progress.html        # Standalone Document 2 (Worker Progress Report)
@@ -53,18 +64,18 @@ wcb_diona_project/
 
 ## 🚀 How to Run Locally
 
-### Option 1: Direct File Open (Zero Setup)
+### Option 1: Direct File Open (Zero Setup Required)
 Double-click `index.html` (or open it in Google Chrome, Microsoft Edge, Firefox, or Safari).
 
-### Option 2: Local HTTP Server (Port 1445 or 8000)
+### Option 2: Local HTTP Server (Port 7725 or 8000)
 ```bash
-# Python 3
-python -m http.server 1445
+# Using Python 3
+python -m http.server 7725
 
-# Or via Node
-npx serve . -l 1445
+# Or using Node / npx
+npx serve . -l 7725
 ```
-Open your browser at `http://localhost:1445`.
+Open your browser at `http://localhost:7725`.
 
 ---
 
@@ -92,7 +103,7 @@ Open your browser at `http://localhost:1445`.
 
 | Timeline | Spoken Script & Screen Action |
 | :--- | :--- |
-| **0:00 - 0:25** | *"Hello everyone. Today I'm presenting my solution for Exercise 1: the WCB Manitoba Medical & Travel Expense Request form. The requirement was to replicate the statutory PDF with 100% fidelity using pure HTML, CSS, and Vanilla JavaScript, ensuring dynamic scalability from single items to multi-page lists."* <br>*(Action: Show the default view of Document 1 on localhost:1445)* |
+| **0:00 - 0:25** | *"Hello everyone. Today I'm presenting my solution for Exercise 1: the WCB Manitoba Medical & Travel Expense Request form. The requirement was to replicate the statutory PDF with 100% fidelity using pure HTML, CSS, and Vanilla JavaScript, ensuring dynamic scalability from single items to multi-page lists."* <br>*(Action: Show the default view of Document 1 on localhost:7725)* |
 | **0:25 - 0:50** | *"Let's look at the dynamic behavior. I have modeled all six tables—Prescription, Over-the-Counter, Medical Supplies, Parking, Mileage, and Transit Fares—as dynamic arrays. Notice the grand total currently shows \$56.00. If I click '+ Add Drug' or edit this price to \$50.00, you can see all category subtotals and the grand total recalculate automatically in real-time."* <br>*(Action: Click '+ Add Drug', change a value, point out automatic recalculation)* |
 | **0:50 - 1:15** | *"Now let's switch from the Default Dataset to the 10+ item Multi-Month Stress Test using the top dropdown. As you can see, the layout seamlessly scales across multiple categories without text clipping or border breakdown. I can also open the Live JSON Editor to inject custom test payloads."* <br>*(Action: Select 'Stress-Test Dataset', scroll down, open & close 'Edit JSON')* |
 | **1:15 - 1:40** | *"For the technical architecture, I used decoupled CSS for typography and print boundaries. When I trigger the Print / Export to PDF button, all action buttons and navigation bars disappear, leaving a clean, print-ready document with exact margins and headers."* <br>*(Action: Click 'Print / Export PDF' and display the print preview modal)* |
@@ -122,4 +133,5 @@ Open your browser at `http://localhost:1445`.
 
 ## 📤 Submission Format
 - **WhatsApp Post Format:** `<Your Name> - <GitHub Repository Link>`
+- **Example:** `Svarshan - https://github.com/Svarshan1445/Diona`
 - **Deadline:** September 1, 2026, by 5:00 PM IST
