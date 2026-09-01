@@ -116,7 +116,7 @@ Each exercise includes a 2-minute narrated demonstration video featuring Picture
 | Exercise | Walkthrough Overview | Video Link |
 | :--- | :--- | :--- |
 | **Exercise 1: Expense Request** | Explains requirements, demonstrates dynamic table scaling (1 vs 10+ rows), live row additions/deletions, real-time total recalculation, print preview, code walkthrough, and AI prompts. | 🎥 [Watch MP4 File](./videos/Exercise1.mp4) <br> 🔗 [Watch on Loom](https://www.loom.com/share/e8627bb8e52b42948e815814af9dd9bb) |
-| **Exercise 2: Worker Progress** | Explains return-to-work tracking, demonstrates clickable radio/checkbox states, interactive 1–10 pain matrix, dataset switching, print formatting, code architecture, and AI prompts. | 🔗 `[Insert Exercise 2 Video Link / Drive / YouTube]` |
+| **Exercise 2: Worker Progress** | Explains return-to-work tracking, demonstrates clickable radio/checkbox states, interactive 1–10 pain matrix, dataset switching, print formatting, code architecture, and AI prompts. | 🎥 [Watch Video 2 on Loom](https://www.loom.com/share/16663dd970134a4aabb9fbca9ee6ebc8) |
 
 ---
 

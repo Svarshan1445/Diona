@@ -14,5 +14,5 @@ This directory contains the narrated demonstration videos for the WCB Manitoba r
 ---
 
 ### Exercise 2: Worker Progress Report
-* **Local File:** `Exercise2.mp4` *(Coming soon / In progress)*
+* **Online Loom Stream:** [Watch on Loom](https://www.loom.com/share/16663dd970134a4aabb9fbca9ee6ebc8)
 * **Description:** Explains return-to-work tracking, custom radio/checkbox selection states, clickable 1–10 pain scale matrix, and recovery treatment schedules.
